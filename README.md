@@ -8,7 +8,6 @@ So the min. value of one "block" is `0` and the max. value is `255`. Why ?
 
 ![image](https://github.com/chmadran/Net_practice/assets/113340699/99aaeed2-2d57-40c9-a3bc-6e3a891fd09c)
 
-
 To make things easier, we can alias an IP address with a human-readable name called a domain name. For example (at the time of writing; IP addresses can change) google.com is the domain name used on top of the IP address 142.250.190.78. So using the domain name is the easiest way for us to reach a computer over the Internet.
 
 An IP address consists of : 
@@ -16,7 +15,6 @@ An IP address consists of :
 * a host address : a unique number assigned to host within that network, such as computers, tablets etc
 
 * ![image](https://github.com/chmadran/Net_practice/assets/113340699/f2368cc7-6997-40f1-8937-9ee6f3b4a6e5)
-
 
 To tell which part is which, thats where the subnet mask comes in. It is a number that ressembles an IP address and it reveals how many bits in the IP address are used for the network by masking the network portion of the IP address.
 
@@ -33,6 +31,9 @@ The following address-range is reserved for so called loopback addresses / local
 `127.0.0.0 – 127.255.255.255`
 
 There is some more special ip-ranges, but for this project, you only need to remember those above.
+A public IP address is an IP address that can be accessed directly over the internet and is assigned to your network router by your internet service provider (ISP). A public (or external) IP address helps you connect to the internet from inside your network, to outside your network.
+
+A private IP address is an address your network router assigns to your device. Each device within the same network is assigned a unique private IP address (sometimes called a private network address) — this is how devices on the same internal network talk to each other.
 
 <h2>MASK ADDRESS</h2>
 
@@ -99,6 +100,25 @@ IP addressses ans subnet masks come  in 5 different classes but 3 of these are f
 ![image](https://github.com/chmadran/Net_practice/assets/113340699/74becdc2-2431-415b-94db-5c0125ee6220)
 
 <h2>NAT : Network address Translation</h2>
+Service used in routers, its purpose is to translate a set of IP Addresses to another set of IP Addresses. The NAT service preserves the limited amount of IPv4 public IP Addresses. When created, they didnt realise how big the internet was going to become, even though there were 4 billion IPv4 addresses available, the engineers thought this would be enough. To prevent shortage, engineers developped NAT and private IP Addresses.
+
+There are two different types of IPV4 Addresses : 
+* public ones are publicly registered on the internet (needed to go on the internet)
+* private ones not publicly registered so cannot access the internet directly (only used internally, inside a home or business). Your router assigns your private IP.
+
+Our router assigns, inside our devices inside our home or business, a private IP despite the fact that we could have a public IP if we asked our Internet Service Provider but that would be...
+
+When we need to access the internet, then our private IPs are translated by NAT to the one public IP Address that we have been given. NAT translates a set of IP addresses to a set of IP addresses. It translates both ways if a computer interacts with a computer outside the network.  
+
+  ![image](https://github.com/chmadran/Net_practice/assets/113340699/67aac65a-5a4a-4675-9117-c0b3952ad430)
+
+
+
+<h2>IPv6</h2>
+In the future, there will be no more NAT / private IP addresses because every device will have its own public IP address as the code looks more like : 
+
+![image](https://github.com/chmadran/Net_practice/assets/113340699/cc0ebc53-6714-4667-8d32-132d202df500)
+
 
 <h3>Interesting Ressources</h3>    
 
@@ -106,4 +126,6 @@ IP addressses ans subnet masks come  in 5 different classes but 3 of these are f
 
 * https://www.youtube.com/watch?v=s_Ntt6eTn94
 
-* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work   
+* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
+* https://www.youtube.com/watch?v=FTUV0t6JaDA
+* https://github.com/lp-ob/NetPractice
