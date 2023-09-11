@@ -140,7 +140,37 @@ Find number of subnets and the range
 
 ![image](https://github.com/chmadran/Net_practice/assets/113340699/3226f327-6e50-498e-8b0e-f53db727d815)
 
+**ROUTING TABLES**
 
+A route contains 2 fields, the first one is the destination of outbound packets, the second one is the next hop of the packets.  
+
+The **destination** default is equivalent to 0.0.0.0/0, which will send the packets indiscriminately to the first network address it encounters. A destination address of 122.3.5.3/24 would send the packets to the network 122.3.5.0.  
+
+The **next hop** is the IP address of the next router (or internet) interface to which the interface of the current machine must send its packets.  
+
+**THE INTERNET**
+
+This level introduces the internet. The internet behaves like a router. However, if an interface is connected directly or indirectly to the internet, it cannot have an IP address in the mentioned above reserved private IP ranges.
+
+1. The next hop of the internet is already entered, and matches the IP address of the Interface R2. Therefore we only need to bother with the destination of the internet.
+
+The internet must send its packets to Client A. To do so, the internet's destination must match the network address of Client A. Let's find the network address of Client A:
+Client A's mask is 255.255.255.128, which is equivalent to /25. This means that the first 25 bits of its IP address are its network address. We know then that the first 3 bytes (24 bits) of its IP address make part of its network address:
+
+`40.178.145.?`  
+
+We now only need to find out if the 25th bit is a 1 or a 0.
+If we convert the number 227 to binary, we get 11100011. The first digit, which corresponds to the 25th bit, is a 1. Since only the 25th bit is part of the network address and not the remaining 7 bits, we get 10000000 for the last byte of the network address, which is 128 in decimal.
+
+The full network address is:
+
+`40.178.145.128`  
+
+With a range of `40.178.145.129 - 40.178.145.254` for its host addresses.
+
+We can now put this address of `40.178.145.128` in the Internet destination. The /25 following the destination address represents the mask applied to its address.
+
+A destination of `40.178.145.227/25` is equivalent to the destination address 40.178.145.128/25, since the mask of /25 will turn all the bits after the 25th to 0 to get the destination's network address.
 
 <h2>IPv6</h2>
 In the future, there will be no more NAT / private IP addresses because every device will have its own public IP address as the code looks more like : 
@@ -150,10 +180,9 @@ In the future, there will be no more NAT / private IP addresses because every de
 
 <h3>Interesting Ressources</h3>    
 
-* https://github.com/tblaase/Net_Practice
-
-* https://www.youtube.com/watch?v=s_Ntt6eTn94
-
-* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-* https://www.youtube.com/watch?v=FTUV0t6JaDA
-* https://github.com/lp-ob/NetPractice
+* https://github.com/tblaase/Net_Practice  
+* https://toufa7.medium.com/new-subnetting-34fadfb86c70  
+* https://www.youtube.com/watch?v=s_Ntt6eTn94  
+* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work  
+* https://www.youtube.com/watch?v=FTUV0t6JaDA  
+* https://github.com/lp-ob/NetPractice  
