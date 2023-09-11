@@ -129,6 +129,10 @@ When we need to access the internet, then our private IPs are translated by NAT 
 
   ![image](https://github.com/chmadran/Net_practice/assets/113340699/67aac65a-5a4a-4675-9117-c0b3952ad430)
 
+<h2>HOW TO DETERMINE HOW TO WRITE IP ADDRESSES</h2>
+
+**FOR ROUTERS**
+
 
 
 <h2>IPv6</h2>
