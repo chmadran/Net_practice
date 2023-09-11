@@ -1,5 +1,22 @@
 # Net_practice
 
+<h2>TCP/IP </h2>
+Une suite de protocoles cad de regles (organisee en couche) utilises pour le transfert des donnees sur Internet, c'est a dire que lorsque deux ordinateurs veulent communiquer entre eux via internet, les donnees echangees vont etre mise en forme selon des regles qui sont toujours les memes afin que chaque machine puisse se comprendre et afin que le transfert des donnees soient fiables. C'est comparable a l'envoi d'une lettre par la poste.
+
+![image](https://github.com/chmadran/Net_practice/assets/113340699/759ca622-c641-432f-9011-1e0180100664)
+
+Dans un ordinateur tourne differentes applications (e.g navigateur, messagerie..). Chaque application est identifiee par un port. Par exemple, une application de serveur web est identifiee par le port 80. Cela permet a un message lorsqu'il est envoye vers un ordinateur, de savoir a quelle application s'adresse le message. L'adresse IP permet de savoir quel chemin emprunter. Enfin, chaque carte reseau possede elle aussi une identification. L'adresse MAC est l'adresse d'une machine.  Les routeurs permettent de relier les sous-reseaux entre eux. S'il relie deux sous reaseaux ils auront deux adresses IP et donc deux cartes reseaux avec deux adresses MAC (ou trois si 3 interfaces et ainsi de suite).
+
+ ![image](https://github.com/chmadran/Net_practice/assets/113340699/25b272ca-2ca4-43c8-b8ac-032d2f588ce9)
+
+
+**SCHEMA DU FLUX DES DONNEES DANS LA SUITE DES PROTOCOLES TCP/IP**
+
+![image](https://github.com/chmadran/Net_practice/assets/113340699/3a5a2e68-879b-449f-9569-04c079e9e86c)
+
+
+Pour voir les echanges de donnees, on peut utiliser ce logiciel de simulatin reseau : https://ent2d.ac-bordeaux.fr/disciplines/sti-college/2019/09/25/filius-un-logiciel-de-simulation-de-reseau-simple-et-accessible/
+
 <h2>IP ADDRESS</h2>
 An IPv4-adress (where IP stands for Internet Protocol), is an identifier for a computer or device on a network. It is a 32-bit numeric address divided into 4 "blocks", each 4 numbers/each 8 bits, that is 1 octet, separated by a period. The number range in each octet is 0-255 i.e.: 
 
