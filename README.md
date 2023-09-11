@@ -131,7 +131,14 @@ When we need to access the internet, then our private IPs are translated by NAT 
 
 <h2>HOW TO DETERMINE HOW TO WRITE IP ADDRESSES</h2>
 
-**FOR ROUTERS**
+**IP ADDRESS**
+
+Find number of subnets and the range  
+
+ Range will be `256 - last 8 bites - 2(broadcast/network entries) = range of each network`  
+ For example : `255.255.255.128` so `256 - 128 - 2 = 126` meaning there will be two network, 1 from `1-126` and   the other one from `129-255` where `0, 128` are emtries and `127, 256` are exits.
+
+![image](https://github.com/chmadran/Net_practice/assets/113340699/3226f327-6e50-498e-8b0e-f53db727d815)
 
 
 
